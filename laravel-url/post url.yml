@@ -1,0 +1,22 @@
+info:
+  name: post url
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/v1/shorten
+  body:
+    type: json
+    data: |
+      {
+        "url": "https://docs.rs/rapina/latest/rapina/",
+        "expires_in_days": 7
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
